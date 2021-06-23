@@ -1,0 +1,114 @@
+@import url(https://fonts.googleapis.com/css2?family=Archivo:wght@700&family=Poppins&display=swap);
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-size: 14px;
+}
+
+body {
+  font-family: 'Archivo';
+  font-weight: 700;
+  font-size: 1.5rem; 
+  line-height: 1.5em;
+  color: #ffffff;
+}
+
+#log {
+  display: table;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0 1rem;
+  width: 100%;
+  table-layout: fixed;
+}
+
+#log > div {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  margin-top: 3rem;
+  animation: fadeInRight .3s ease forwards, fadeOut 0.5s ease {message_hide_delay} forwards;
+  -webkit-animation: fadeInRight .3s ease forwards, fadeOut 0.5s ease {message_hide_delay} forwards;
+}
+
+#log > div {
+  margin-bottom: 1rem;
+}
+
+#log > div .deleted {
+  visibility: hidden;
+}
+
+#log .emote {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  padding: 0.4em 0.2em;
+  position: relative;
+}
+
+#log .emote img {
+  display: inline-block;
+  height: 1em;
+  opacity: 0;
+}
+
+#log .meta {
+  color: #fcfcfc;
+  position: absolute;
+  padding: 0 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  transform: translate(0, -2.2rem);
+}
+
+#log .meta {  
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+#log .message {
+  flex: 1;
+  width: 100%;
+  max-width: 100%;
+  font-family: 'Poppins';
+  font-size: 1.3rem;
+  font-weight: 400;
+  white-space: wrap;
+  word-wrap: break-word;
+  padding: 0.5rem;
+
+  background: #8257e6;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, .64)
+}
+
+.colon {
+  display: none;
+}
+
+.badge {
+  display: inline-block;
+  margin-right: 0.2em;
+  position: relative;
+  height: 0.8em;
+  vertical-align: middle;
+  top: -0.1em;
+}
+
+.name {
+  margin-left: 0.2em;
+}
